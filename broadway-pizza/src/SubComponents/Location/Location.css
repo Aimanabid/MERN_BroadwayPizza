@@ -1,0 +1,6 @@
+#map {
+    height: 700px; /* Set height for the map */
+    width: 100%;
+    z-index: 0;
+  }
+  
