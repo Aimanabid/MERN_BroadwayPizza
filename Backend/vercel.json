@@ -2,14 +2,25 @@
   "version": 2,
   "builds": [
     {
-      "src": "Backend.js",
+      "src": "index.js", 
       "use": "@vercel/node"
+    },
+    {
+      "src": "broadway-pizza/package.json", 
+      "use": "@vercel/static-build", 
+      "config": {
+        "distDir": "broadway-pizza/build"
+      }
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)", 
+      "dest": "index.js"
+    },
+    {
       "src": "/(.*)",
-      "dest": "Backend.js" 
+      "dest": "/broadway-pizza/build/index.html"
     }
   ]
 }
