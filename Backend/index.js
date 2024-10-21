@@ -15,7 +15,7 @@ const cors = require('cors');
 const app = express()
 // postman se jo data arha usko handle krne keliye
 app.use(express.json())
-app.use(cors('https://mern-broadway-pizza.vercel.app/')); 
+app.use(cors()); 
 
 app.post('/register',async(req,res)=>{
 
